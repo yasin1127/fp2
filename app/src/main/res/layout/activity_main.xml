@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:padding="10dp"
+    android:background="@drawable/gradiant"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -372,8 +373,9 @@
         android:id="@+id/Kcardview"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        app:cardCornerRadius="5dp"
-        android:layout_marginTop="15dp"
+        app:cardCornerRadius="25dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#75000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Wcardview"
@@ -387,7 +389,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="DENMOHAR AMOUNT IS- "
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="65dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textColor="#00BCD4"
@@ -409,7 +411,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="KABIN AMOUNT IS- "
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="65dp"
                 android:layout_marginTop="10dp"
                 android:textStyle="bold"
                 android:textColor="#00BCD4"
@@ -458,7 +460,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="GROOM SIGNETURE"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="28dp"
                 android:layout_marginTop="10dp"
                 android:textSize="15dp"
                 android:textColor="@color/black"
@@ -487,7 +489,7 @@
                 android:textSize="15dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:layout_marginLeft="38dp"
+                android:layout_marginLeft="35dp"
                 android:layout_marginTop="10dp"
                 />
 
