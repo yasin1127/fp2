@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="300dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="1.5dp"
+            android:elevation="15dp"
+            app:cardMaxElevation="15dp"
+            app:cardCornerRadius="10dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               android:padding="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/infotxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GROOM INFORMATION :"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/Gimg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="4dp"
+                    android:src="#00BCD4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/Gnametxt"
+                    app:layout_constraintTop_toBottomOf="@+id/infotxt" />
+
+                <TextView
+                    android:id="@+id/Gnametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingStart="5dp"
+                    android:text="GROOM NAME"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Gimg" />
+
+                <TextView
+                    android:id="@+id/GFnametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GROOM FATHER NAME"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Gnametxt"
+                    />
+                <TextView
+                    android:id="@+id/GMnametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GROOM MOTHER NAME"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/GFnametxt"
+                    />
+                <TextView
+                    android:id="@+id/Gcontecttxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contect Number"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/GMnametxt"
+                    />
+                <TextView
+                    android:id="@+id/Gnidtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NID Number"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Gcontecttxt"
+                    />
+                <TextView
+                android:id="@+id/Gprasentaddresstxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="present address: ......"
+                android:paddingStart="5dp"
+                android:layout_marginTop="5dp"
+                android:textSize="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Gnidtxt"
+                />
+                <TextView
+                    android:id="@+id/Gparmanentaddresstxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="parmanent address: ......"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="30dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Gprasentaddresstxt"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="300dp"
+            android:layout_weight="1"
+            android:layout_marginStart="1.5dp"
+            android:elevation="15dp"
+            app:cardMaxElevation="15dp"
+            app:cardCornerRadius="10dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="2dp"
+                >
+
+                <TextView
+                    android:id="@+id/Binfotxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BRIDE INFORMATION :"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/Bimg"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Binfotxt" />
+
+                <TextView
+                    android:id="@+id/Bnametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:paddingStart="5dp"
+                    android:text="BRIDE NAME"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Bimg" />
+
+                <TextView
+                    android:id="@+id/BFnametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BRIDE FATHER NAME"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Bnametxt"
+                    />
+                <TextView
+                    android:id="@+id/BMnametxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BRIDE MOTHER NAME"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BFnametxt"
+                    />
+                <TextView
+                    android:id="@+id/Bcontecttxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contect Number"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/BMnametxt"
+                    />
+                <TextView
+                    android:id="@+id/Bnidtxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NID Number"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Bcontecttxt"
+                    />
+                <TextView
+                    android:id="@+id/Bprasentaddresstxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="present address: ......"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Bnidtxt"
+                    />
+                <TextView
+                    android:id="@+id/Bparmanentaddresstxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="parmanent address: ......"
+                    android:paddingStart="5dp"
+                    android:layout_marginTop="30dp"
+                    android:textSize="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/Bprasentaddresstxt"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/Wdetailstxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Widness details:  "
+        android:layout_marginStart="5dp"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Wcardview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#32000000"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Wdetailstxt">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/uploadbtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/upload"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Upload Details"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#3F51B5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/uploadbtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Kcardview"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Wcardview"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/Denmohartxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="DENMOHAR AMOUNT IS- "
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/DenmoharAmounttxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="50,000/= "
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="#040707"
+                app:layout_constraintStart_toEndOf="@+id/Denmohartxt"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/Kabintxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="KABIN AMOUNT IS- "
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="#00BCD4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Denmohartxt" />
+            <TextView
+                android:id="@+id/KabinAmounttxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="3,00,000/="
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="#0D1415"
+                app:layout_constraintStart_toEndOf="@+id/Kabintxt"
+                app:layout_constraintTop_toBottomOf="@+id/DenmoharAmounttxt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/signlayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/Kcardview">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/sinetureimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/upload"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GROOM SIGNETURE"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/Bsinetureimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/upload"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BRIDE SIGNETURE"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginLeft="38dp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
